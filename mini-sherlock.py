@@ -61,7 +61,7 @@ etsy = requests.get("https://www.etsy.com/shop/"+nickname)
 behance = requests.get("https://www.behance.net/"+nickname)
 goodreads = requests.get("https://www.goodreads.com/"+nickname)
 instructables = requests.get("https://www.instructables.com/member/"+nickname)
-
+keybase = requests.get("https://keybase.io/"+nickname)
 # Обработка
 
 if  github.status_code == 200:
@@ -236,3 +236,10 @@ if  instructables.status_code == 200:
     print ("Instructables - https://www.instructables.com/member/"+nickname)
 else:
     print ("Instructbales - не найден")
+
+os.system("sleep 0.1")
+
+if  keybase.status_code == 200:
+    print ("Keybase - https://keybase.io/"+nickname)
+else:
+    print ("Keybase - не найден")

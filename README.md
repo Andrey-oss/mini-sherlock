@@ -1,1 +1,1 @@
-Программа для пробива по нику
+Simple OSINT app for deanonimyzing usernames

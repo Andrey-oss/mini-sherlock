@@ -1,10 +1,8 @@
-# Подключения библиотек
+'''Simple sherlock realisation using requests library'''
 
-import os
 import requests
 
-os.system("clear")
-print ('''
+BANNER = '''
 
 ███╗░░░███╗██╗███╗░░██╗██╗░░░░░░░██████╗██╗░░██╗███████╗██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
 ████╗░████║██║████╗░██║██║░░░░░░██╔════╝██║░░██║██╔════╝██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
@@ -12,234 +10,169 @@ print ('''
 ██║╚██╔╝██║██║██║╚████║██║╚════╝░╚═══██╗██╔══██║██╔══╝░░██╔══██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░
 ██║░╚═╝░██║██║██║░╚███║██║░░░░░░██████╔╝██║░░██║███████╗██║░░██║███████╗╚█████╔╝╚█████╔╝██║░╚██╗
 ╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝░░░░░░╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝
-                                                        Coded by https://t.me/Andreyoss
+                                    {0}
 
 
-''')
+'''
+print (BANNER.format('Coded by https://t.me/Andreyoss'))
 
-# Ввод никнейма
-nickname = input ("Введите пожалуйста никнейм для проверки: ")
+nickname = input ("Enter nickname: ")
 
-os.system("clear")
-os.system("clear")
-print ('''
+print (BANNER.format('Please wait..'))
 
-███╗░░░███╗██╗███╗░░██╗██╗░░░░░░░██████╗██╗░░██╗███████╗██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
-████╗░████║██║████╗░██║██║░░░░░░██╔════╝██║░░██║██╔════╝██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
-██╔████╔██║██║██╔██╗██║██║█████╗╚█████╗░███████║█████╗░░██████╔╝██║░░░░░██║░░██║██║░░╚═╝█████═╝░
-██║╚██╔╝██║██║██║╚████║██║╚════╝░╚═══██╗██╔══██║██╔══╝░░██╔══██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░
-██║░╚═╝░██║██║██║░╚███║██║░░░░░░██████╔╝██║░░██║███████╗██║░░██║███████╗╚█████╔╝╚█████╔╝██║░╚██╗
-╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝░░░░░░╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝
-
-                             Пожалуйста подождите
-
-
-''')
-# Подготовка сервисов
-github = requests.get ("https://github.com/"+nickname)
-gitlab = requests.get("https://gitlab.com/"+nickname)
-facebook = requests.get("https://m.facebook.com/"+nickname)
-instagram = requests.get("https://www.instagram.com/"+nickname)
-medium = requests.get("https://medium.com/@"+nickname)
-youtube = requests.get("https://www.youtube.com/c/"+nickname)
-soundcloud = requests.get("https://soundcloud.com/"+nickname)
-disqus = requests.get("https://disqus.com/"+nickname)
-pinterest = requests.get("https://www.pinterest.com/"+nickname)
-vimeo = requests.get("https://vimeo.com/"+nickname)
-aboutme = requests.get("https://about.me/"+nickname)
-flipboard = requests.get("https://flipboard.com/@"+nickname)
-slideshare = requests.get("https://www.slideshare.net/"+nickname)
-spotify = requests.get("https://open.spotify.com/user/"+nickname)
-scribd = requests.get("https://www.scribd.com/"+nickname)
-patreon = requests.get("https://www.patreon.com/"+nickname)
-bitbucket = requests.get("https://bitbucket.org/"+nickname)
-roblox = requests.get("https://www.roblox.com/user.aspx?username="+nickname)
-gravatar = requests.get("http://en.gravatar.com/"+nickname)
-imgsrcru = requests.head("https://imgsrc.ru/main/user.php?user="+nickname)
-dailymotion = requests.get("https://www.dailymotion.com/"+nickname)
-etsy = requests.get("https://www.etsy.com/shop/"+nickname)
-behance = requests.get("https://www.behance.net/"+nickname)
-goodreads = requests.get("https://www.goodreads.com/"+nickname)
-instructables = requests.get("https://www.instructables.com/member/"+nickname)
-keybase = requests.get("https://keybase.io/"+nickname)
-# Обработка
+github = requests.get ("https://github.com/"+nickname, timeout=15)
+gitlab = requests.get("https://gitlab.com/"+nickname, timeout=15)
+facebook = requests.get("https://m.facebook.com/"+nickname, timeout=15)
+instagram = requests.get("https://www.instagram.com/"+nickname, timeout=15)
+medium = requests.get("https://medium.com/@"+nickname, timeout=15)
+youtube = requests.get("https://www.youtube.com/c/"+nickname, timeout=15)
+soundcloud = requests.get("https://soundcloud.com/"+nickname, timeout=15)
+disqus = requests.get("https://disqus.com/"+nickname, timeout=15)
+pinterest = requests.get("https://www.pinterest.com/"+nickname, timeout=15)
+vimeo = requests.get("https://vimeo.com/"+nickname, timeout=15)
+aboutme = requests.get("https://about.me/"+nickname, timeout=15)
+flipboard = requests.get("https://flipboard.com/@"+nickname, timeout=15)
+slideshare = requests.get("https://www.slideshare.net/"+nickname, timeout=15)
+spotify = requests.get("https://open.spotify.com/user/"+nickname, timeout=15)
+scribd = requests.get("https://www.scribd.com/"+nickname, timeout=15)
+patreon = requests.get("https://www.patreon.com/"+nickname, timeout=15)
+bitbucket = requests.get("https://bitbucket.org/"+nickname, timeout=15)
+roblox = requests.get("https://www.roblox.com/user.aspx?username="+nickname, timeout=15)
+gravatar = requests.get("http://en.gravatar.com/"+nickname, timeout=15)
+imgsrcru = requests.head("https://imgsrc.ru/main/user.php?user="+nickname, timeout=15)
+dailymotion = requests.get("https://www.dailymotion.com/"+nickname, timeout=15)
+etsy = requests.get("https://www.etsy.com/shop/"+nickname, timeout=15)
+behance = requests.get("https://www.behance.net/"+nickname, timeout=15)
+goodreads = requests.get("https://www.goodreads.com/"+nickname, timeout=15)
+instructables = requests.get("https://www.instructables.com/member/"+nickname, timeout=15)
+keybase = requests.get("https://keybase.io/"+nickname, timeout=15)
 
 if  github.status_code == 200:
-    print ("Github - https://github.com/"+nickname)
+    print ("Github - https://github.com/"+nickname, timeout=15)
 else:
-    print ("Github - не найденo")
-
-os.system ("sleep 0.1")
+    print ("Github - not found")
 
 if  gitlab.status_code == 200:
-    print ("Gitlab - https://gitlab.com/"+nickname)
+    print ("Gitlab - https://gitlab.com/"+nickname, timeout=15)
 else:
-    print ("Gitlab - не найденo")
-
-os.system ("sleep 0.1")
+    print ("Gitlab - not found")
 
 if  facebook.status_code == 200:
-    print ("Facebook - https://www.facebook.com/"+nickname)
+    print ("Facebook - https://www.facebook.com/"+nickname, timeout=15)
 else:
-    print ("Facebook - не найден")
-
-os.system ("sleep 0.1")
+    print ("Facebook - not found")
 
 if  instagram.status_code == 200:
-    print ("Instagram - https://www.instagram.com/"+nickname)
+    print ("Instagram - https://www.instagram.com/"+nickname, timeout=15)
 else:
-    print ("Instagram - не найден")
-
-os.system ("sleep 0.1")
+    print ("Instagram - not found")
 
 if  medium.status_code == 200:
-    print ("Medium - https://medium.com/@"+nickname)
+    print ("Medium - https://medium.com/@"+nickname, timeout=15)
 else:
-    print ("Medium - не найден")
-
-os.system ("sleep 0.1")
+    print ("Medium - not found")
 
 if  youtube.status_code == 200:
-    print ("Youtube - https://youtube.com/c/"+nickname)
+    print ("Youtube - https://youtube.com/c/"+nickname, timeout=15)
 else:
-    print ("Youtube - не найден")
-
-os.system ("sleep 0.1")
+    print ("Youtube - not found")
 
 if  soundcloud.status_code == 200:
-    print ("Soundcloud - https://soundcloud.com/"+nickname)
+    print ("Soundcloud - https://soundcloud.com/"+nickname, timeout=15)
 else:
-    print ("Soundcloud - не найден")
-
-os.system ("sleep 0.1")
+    print ("Soundcloud - not found")
 
 if  disqus.status_code == 200:
-    print ("Disqus - https://disqus.com/"+nickname)
+    print ("Disqus - https://disqus.com/"+nickname, timeout=15)
 else:
-    print ("Disqus - не найден")
-
-os.system ("sleep 0.1")
+    print ("Disqus - not found")
 
 if  pinterest.status_code == 200:
-    print ("Pinterest - https://www.pinterest.com/"+nickname)
+    print ("Pinterest - https://www.pinterest.com/"+nickname, timeout=15)
 else:
-    print ("Pinterest - не найден")
-
-os.system ("sleep 0.1")
+    print ("Pinterest - not found")
 
 if  vimeo.status_code == 200:
-    print ("Vimeo - https://vimeo.com/"+nickname)
+    print ("Vimeo - https://vimeo.com/"+nickname, timeout=15)
 else:
-    print ("Vimeo - не найден")
-
-os.system ("sleep 0.1")
+    print ("Vimeo - not found")
 
 if  aboutme.status_code == 200:
-    print ("About.me - https://about.me/"+nickname)
+    print ("About.me - https://about.me/"+nickname, timeout=15)
 else:
-    print ("About.me - не найден")
-
-os.system("sleep 0.1")
+    print ("About.me - not found")
 
 if  flipboard.status_code == 200:
-    print ("FlipBoard - https://flipboard.com/@"+nickname)
+    print ("FlipBoard - https://flipboard.com/@"+nickname, timeout=15)
 else:
-    print ("FlipBoard - не найден")
-
-os.system("sleep 0.1")
+    print ("FlipBoard - not found")
 
 if  slideshare.status_code == 200:
-    print ("SlideShare - https://slideshare.net/"+nickname)
+    print ("SlideShare - https://slideshare.net/"+nickname, timeout=15)
 else:
-    print ("SlideShare - не найден")
-
-os.system("sleep 0.1")
+    print ("SlideShare - not found")
 
 if  spotify.status_code == 200:
-    print ("Spotify - https://open.spotify.com/user/"+nickname)
+    print ("Spotify - https://open.spotify.com/user/"+nickname, timeout=15)
 else:
-    print ("Spotify - не найден")
-
-os.system("sleep 0.1")
+    print ("Spotify - not found")
 
 if  scribd.status_code == 200:
-    print ("Scribd - https://www.scribd.com/"+nickname)
+    print ("Scribd - https://www.scribd.com/"+nickname, timeout=15)
 else:
-    print ("Scribd - не найден")
-
-os.system("sleep 0.1")
+    print ("Scribd - not found")
 
 if  patreon.status_code == 200:
-    print ("Patreon - https://www.patreon.com/"+nickname)
+    print ("Patreon - https://www.patreon.com/"+nickname, timeout=15)
 else:
-    print ("Patreon - не найден")
-
-os.system("sleep 0.1")
+    print ("Patreon - not found")
 
 if  bitbucket.status_code == 200:
-    print ("BitBucket - https://bitbucket.org/"+nickname)
+    print ("BitBucket - https://bitbucket.org/"+nickname, timeout=15)
 else:
-    print ("BitBucket - не найден")
-
-os.system("sleep 0.1")
+    print ("BitBucket - not found")
 
 if  roblox.status_code == 200:
-    print ("Roblox - https://www.roblox.com/user.aspx?username="+nickname)
+    print ("Roblox - https://www.roblox.com/user.aspx?username="+nickname, timeout=15)
 else:
-    print ("Roblox - не найден")
-
-os.system("sleep 0.1")
+    print ("Roblox - not found")
 
 if  gravatar.status_code == 200:
-    print ("Gravatar - http://en.gravatar.com/"+nickname)
+    print ("Gravatar - http://en.gravatar.com/"+nickname, timeout=15)
 else:
-    print ("Gravatar - не найден")
-
-os.system("sleep 0.1")
+    print ("Gravatar - not found")
 
 if  imgsrcru.status_code == 200:
-    print ("iMGSRC.RU - https://imgsrc.ru/main/user.php?user="+nickname)
+    print ("iMGSRC.RU - https://imgsrc.ru/main/user.php?user="+nickname, timeout=15)
 else:
-    print ("iMGSRC.RU - не найден")
-
-os.system("sleep 0.1")
+    print ("iMGSRC.RU - not found")
 
 if  dailymotion.status_code == 200:
-    print ("DailyMotion - https://www.dailymotion.com/"+nickname)
+    print ("DailyMotion - https://www.dailymotion.com/"+nickname, timeout=15)
 else:
-    print ("DailyMotion - не найден")
-
-os.system("sleep 0.1")
+    print ("DailyMotion - not found")
 
 if  etsy.status_code == 200:
-    print ("Etsy - https://www.etsy.com/shop/"+nickname)
+    print ("Etsy - https://www.etsy.com/shop/"+nickname, timeout=15)
 else:
-    print ("Etsy - не найден")
-
-os.system("sleep 0.1")
+    print ("Etsy - not found")
 
 if  behance.status_code == 200:
-    print ("Behance - https://www.behance.net/"+nickname)
+    print ("Behance - https://www.behance.net/"+nickname, timeout=15)
 else:
-    print ("Behance - не найден")
-
-os.system("sleep 0.1")
+    print ("Behance - not found")
 
 if  goodreads.status_code == 200:
-    print ("Goodreads - https://www.goodreads.com/"+nickname)
+    print ("Goodreads - https://www.goodreads.com/"+nickname, timeout=15)
 else:
-    print ("Goodreads - не найден")
-
-os.system("sleep 0.1")
+    print ("Goodreads - not found")
 
 if  instructables.status_code == 200:
-    print ("Instructables - https://www.instructables.com/member/"+nickname)
+    print ("Instructables - https://www.instructables.com/member/"+nickname, timeout=15)
 else:
-    print ("Instructbales - не найден")
-
-os.system("sleep 0.1")
+    print ("Instructbales - not found")
 
 if  keybase.status_code == 200:
-    print ("Keybase - https://keybase.io/"+nickname)
+    print ("Keybase - https://keybase.io/"+nickname, timeout=15)
 else:
-    print ("Keybase - не найден")
+    print ("Keybase - not found")

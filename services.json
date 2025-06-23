@@ -1,0 +1,132 @@
+{
+    "github": {
+        "url": "https://github.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "gitlab": {
+        "url": "https://gitlab.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "facebook": {
+        "url": "https://m.facebook.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "instagram": {
+        "url": "https://www.instagram.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "medium": {
+        "url": "https://medium.com/@",
+        "method": "GET",
+        "success_code": 200
+    },
+    "youtube": {
+        "url": "https://www.youtube.com/c/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "soundcloud": {
+        "url": "https://soundcloud.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "disqus": {
+        "url": "https://disqus.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "pinterest": {
+        "url": "https://www.pinterest.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "vimeo": {
+        "url": "https://vimeo.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "aboutme": {
+        "url": "https://about.me/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "flipboard": {
+        "url": "https://flipboard.com/@",
+        "method": "GET",
+        "success_code": 200
+    },
+    "slideshare": {
+        "url": "https://www.slideshare.net/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "spotify": {
+        "url": "https://open.spotify.com/user/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "scribd": {
+        "url": "https://www.scribd.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "patreon": {
+        "url": "https://www.patreon.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "bitbucket": {
+        "url": "https://bitbucket.org/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "roblox": {
+        "url": "https://www.roblox.com/user.aspx?username=",
+        "method": "GET",
+        "success_code": 200
+    },
+    "gravatar": {
+        "url": "http://en.gravatar.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "imgsrcru": {
+        "url": "https://imgsrc.ru/main/user.php?user=",
+        "method": "HEAD",
+        "success_code": 200
+    },
+    "dailymotion": {
+        "url": "https://www.dailymotion.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "etsy": {
+        "url": "https://www.etsy.com/shop/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "behance": {
+        "url": "https://www.behance.net/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "goodreads": {
+        "url": "https://www.goodreads.com/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "instructables": {
+        "url": "https://www.instructables.com/member/",
+        "method": "GET",
+        "success_code": 200
+    },
+    "keybase": {
+        "url": "https://keybase.io/",
+        "method": "GET",
+        "success_code": 200
+    }
+}

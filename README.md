@@ -31,7 +31,7 @@ pip3 install -r requirements.txt
 
 3. Launch the script:
 ``` bash
-python3 mini-sherlock.py
+python3 mini_sherlock.py
 ```
 
 ## Docker

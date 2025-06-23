@@ -1,0 +1,6 @@
+===v1.0.0===
+
+1. Refactored code
+2. Moved all services to the services.json file
+3. Added Dockerfile for docker support
+4. Some changes in README.md

@@ -14,6 +14,7 @@ A lightweight username search tool inspired by Sherlock, designed for quick chec
 2. Python3
 3. Python3-pip
 4. Internet connection
+5. Docker (optional)
 
 ## Installation
 
@@ -31,6 +32,24 @@ pip3 install -r requirements.txt
 3. Launch the script:
 ``` bash
 python3 mini-sherlock.py
+```
+
+## Docker
+Also you can run this app by using docker:
+
+1. Start the service:
+```bash
+systemctl start docker
+```
+
+2. Build container:
+```bash
+docker build -t mini_sherlock .
+```
+
+3. Run mini-sherlock:
+```bash
+docker run --rm -it mini_sherlock
 ```
 
 ### Contributing
